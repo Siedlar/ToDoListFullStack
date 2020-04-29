@@ -1,0 +1,11 @@
+header{
+    height: 100%;
+    background-image:url(src/assets/image/tlo.jpg);
+    color:black;
+}
+a:hover{
+    background-color: 	#00BFFF;
+    color:black;
+    transform: scale(1.25);
+    transition: 0.3s;
+}
