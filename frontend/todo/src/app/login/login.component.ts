@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { WelcomeDataService } from '../service/data/welcome-data.service';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -7,11 +8,18 @@ import { Component, OnInit } from '@angular/core';
 export class LoginComponent implements OnInit {
 username="essa"
 password=""
-  constructor() { }
+  
+constructor(private service:WelcomeDataService) { 
+  
+  }
 
   ngOnInit(): void {
   }
 login(){
   console.log(this.username);
+}
+getWelcomeMessege(){
+  console.log(this.service.executeHelloWorldBean());
+  
 }
 }
