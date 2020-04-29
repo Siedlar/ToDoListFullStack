@@ -1,9 +1,29 @@
 <html>
-    <body>Username <input type="text" name="username" [(ngModel)]="username">
-Password <input type="password" name="password" >
-<button (click)=login()>Login</button> 
-<button  (click)=getWelcomeMessege() class=".btn .btn-success">Click</button>
-{{username}}
-<h2 *ngIf="welcome">{{welcome}}</h2>
-</body>
+    <body>
+        <div class="wrapper fadeInDown zero-raduis">
+            <div id="formContent">
+   
+    
+            
+              <div class="fadeIn first">
+            
+                <h2 class="my-5">Zaloguj się</h2>
+              </div>
+    
+           
+              <form>
+                <input type="email" id="email" class="fadeIn second zero-raduis" name="email" placeholder="email">
+                <input type="password" id="password" class="fadeIn third zero-raduis" name="login" placeholder="password">
+                  <div id="formFooter">
+                    <a class="underlineHover" href="#">Zapomniałeś hasła?</a>
+                </div>
+                <input type="submit" (click)="getWelcomeMessege()" class="fadeIn fourth zero-raduis" value="Zaloguj">
+                <h2>Nie posiadasz jeszcze konta ?</h2>
+                <input type="button" class="fadeIn fourth zero-raduis pc" value="Zarejestruj się">
+              </form>
+              
+    
+            </div>
+      </div>
+    </body>
 </html>
