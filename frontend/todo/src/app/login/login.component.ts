@@ -8,7 +8,7 @@ import { WelcomeDataService } from '../service/data/welcome-data.service';
 export class LoginComponent implements OnInit {
 username="essa"
 password=""
-  
+welcome:string;
 constructor(private service:WelcomeDataService) { 
   
   }
@@ -19,7 +19,14 @@ login(){
   console.log(this.username);
 }
 getWelcomeMessege(){
-  console.log(this.service.executeHelloWorldBean());
-  
+  this.service.executeHelloWorldBean().subscribe(
+    response=>this.handleSuccessfulResponse(response)
+  );
+
+}
+handleSuccessfulResponse(response){
+  this.welcome=response.essa;
+  console.log(response)
+console.log(response.essa)
 }
 }

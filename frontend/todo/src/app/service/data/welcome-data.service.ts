@@ -3,6 +3,7 @@ import {HttpClient} from '@angular/common/http'
 @Injectable({
   providedIn: 'root'
 })
+
 export class WelcomeDataService {
 
   constructor(
@@ -10,7 +11,10 @@ export class WelcomeDataService {
   ) { }
   
   executeHelloWorldBean(){
-  return this.http.get('http://localhost:8080/helloBean');
+  return this.http.get<helloBean>('http://localhost:8080/helloBean');
     //console.log("serwis");
   }
+}
+export class helloBean{
+  constructor(public essa:string){}
 }
